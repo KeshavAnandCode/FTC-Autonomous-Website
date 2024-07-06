@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2b2b2b;
+            color: #a9b7c6;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            margin-bottom: 20px; /* Add margin bottom for spacing */
+        }
+        button {
+            display: block;
+            width: 5%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 0%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <pre><code id="code-content" class="java"></code></pre>
+        <button id="copyCodeBtn">Copy Code</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Highlight the code block
+            hljs.highlightAll();
+
+            // Copy code to clipboard functionality
+            const copyCodeBtn = document.getElementById('copyCodeBtn');
+            const codeContent = document.getElementById('code-content').textContent.trim();
+
+            copyCodeBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(codeContent).then(() => {
+                    alert('Code copied to clipboard!');
+                }).catch(err => {
+                    console.error('Error copying code to clipboard: ', err);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
