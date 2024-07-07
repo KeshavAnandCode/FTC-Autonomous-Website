@@ -102,7 +102,6 @@ img {
     border-radius: 4px;
     padding: 5px;
     background-color: #fff;
-
 }
 
 #hhhhh {
@@ -112,4 +111,160 @@ img {
     padding: 5px;
     background-color: #fff;
     margin-left: 5%;
+}
+
+/* Popup form styles */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 30px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-width: 1000px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-form h3 {
+    margin-top: 0;
+}
+
+.popup-form label {
+    display: block;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.popup-form input[type="text"],
+.popup-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Add this CSS to your stylesheet */
+.CodeMirror.small-font {
+    font-size: 12px; /* Adjust the font size as needed */
+    line-height: 1.2; /* Optional: Adjust line height for better readability */
+}
+
+.popup-form .popup-buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.popup-form button {
+    padding: 12px 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.action-class {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.action-class span {
+    font-weight: bold;
+}
+
+.action-class-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.action-class-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+}
+
+/* Basic styles for the sidebar */
+.sidebar {
+    position: fixed; /* Fixed position so it stays visible while scrolling */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height of the viewport */
+    width: 250px; /* Adjust as needed */
+    background-color: #f8f9fa; /* Light gray background */
+    overflow-y: auto; /* Allow sidebar to scroll if content exceeds height */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px; /* Padding for each list item */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark text color */
+    display: block; /* Make the entire list item clickable */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.sidebar ul li a:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+}
+
+/* Main content area */
+.content {
+    margin-left: 250px; /* Adjust for sidebar width */
+    padding: 20px; /* Add padding to separate content from sidebar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Reduce sidebar width for smaller screens */
+    }
+
+    .content {
+        margin-left: 200px; /* Adjust content margin for smaller sidebar */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 180px; /* Further reduce sidebar width for very small screens */
+    }
+
+    .content {
+        margin-left: 180px; /* Adjust content margin accordingly */
+    }
+}
+
+.sidebar ul li a.active {
+    background-color: #007bff; /* Active link background color */
+    color: #fff; /* Active link text color */
 }

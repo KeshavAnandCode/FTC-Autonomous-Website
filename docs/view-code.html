@@ -47,20 +47,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Function to update code content
+            function updateCodeContent() {
+                const generatedCode = generateCodeStep2(); // Assuming generateCodeStep2 is defined elsewhere
+                document.getElementById('code-content').textContent = generatedCode.trim();
+            }
+
             // Highlight the code block
             hljs.highlightAll();
 
             // Copy code to clipboard functionality
             const copyCodeBtn = document.getElementById('copyCodeBtn');
-            const codeContent = document.getElementById('code-content').textContent.trim();
 
             copyCodeBtn.addEventListener('click', () => {
+                const codeContent = document.getElementById('code-content').textContent.trim();
                 navigator.clipboard.writeText(codeContent).then(() => {
                     alert('Code copied to clipboard!');
                 }).catch(err => {
                     console.error('Error copying code to clipboard: ', err);
                 });
             });
+
+            // Initial update of code content
+            updateCodeContent();
         });
     </script>
 </body>

@@ -3,24 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FTC RoadRunner Path Generator</title>
+    <title>FTC RoadRunner 1.0 Path Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/theme/darcula.min.css">
+
 </head>
 <body>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="step2.html">Step 2</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </div>
+
     <div class="container">
         <h1>FTC RoadRunner 1.0 Path Generator</h1>
-        <h4>Courtesy of FTC Team 23344, Technical Tubulence</h4>
+        <h4>Courtesy of FTC Team 23344, Technical Turbulence</h4>
         <p id="top">All measurements in inches and degrees</p>
 
-        <h2>Step 2: Name and </h2>
+        <h2>Step 2: Add Action Classes</h2>
         
+        <button id="addActionClassBtn">Add an Action Class</button>
         <button id="viewCodeStep2">View Code</button>
+
+        <!-- Display area for created action classes -->
+        <div id="actionClassesContainer"></div>
 
         <!-- Hidden pre tag for holding the code -->
         <pre style="display:none;" id="hiddenCode"></pre>
     </div>
 
+    <!-- Popup form for adding/editing an action class -->
+    <div id="popupForm" class="popup-form">
+        <h3>Create/Edit Action Class</h3>
+        <label for="className">Class Name: (Don't use the word 'Action' in this name)</label>
+        <input type="text" id="className" name="className">
+        <h4>IMPORTANT: YOU MUST CLICK ON THE TEXT AREA FIRST</h4>
+        <textarea id="classCode" class="java"></textarea>
+        <div class="popup-buttons">
+            <button id="saveClassBtn">Save Class</button>
+            <button id="cancelClassBtn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Popup form for entering class name -->
+    <div id="addClassPopup" class="popup-form">
+        <h3>Enter Class Name</h3>
+        <label for="classNamePopup">Class Name:</label>
+        <input type="text" id="classNamePopup" name="classNamePopup">
+        <div class="popup-buttons">
+            <button id="saveClassNameBtn">Save</button>
+            <button id="cancelClassNameBtn">Cancel</button>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/clike/clike.min.js"></script>
+    <script src = "sidebar.js"></script>
     <script src="Step2.js"></script>
 </body>
 </html>
