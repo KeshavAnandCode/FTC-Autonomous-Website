@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTC RoadRunner Path Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+</head>
+<body>
+
+
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li id = "Header"><a href = "index.html">FTC RoadRunner 1.0 Autonomous Generator</a></li>
+            <li> </li>
+            <li><a href="step1.html">Step 1: Name and Package</a></li>
+            <li><a href="step2.html">Step 2: Add Action Classes</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>FTC RoadRunner 1.0 Autonomous Generator</h1>
+        <h4>Courtesy of FTC Team 23344, Technical Tubulence</h4>
+        <p id="top">All measurements in inches and degrees</p>
+
+        <h2>Step 1: Name and Package</h2>
+        <h5>Enter Autonomous Program Name</h5>
+        <p>Enter any name.
+             This will be both the name of the class and the name of the autonomous program.
+             You must follow java naming rules (no spaces, etc.)</p>
+        <input type = "text" id="name" placeholder="Enter Program Name">
+        <h5>Enter Package (Folder) Name</h5>
+        <p>This is the path to the folder where you will store your autonomous program. 
+            In Android Studio, you can easily find the package by right clicking the desired folder
+             and clicking 'Copy Path/Reference'.</p>
+        <img src ="ht.png" id="hhhhh"/>
+        <p>Then, click 'Copy Reference' to get your package. </p>
+        <img src = "htf.png" />
+        <input type = "text" id="package" placeholder="Enter Package Name">
+
+
+        <button id="step2Btn">Next Step</button>
+        <button id="viewCode">View Code</button>
+
+        <!-- Hidden pre tag for holding the code -->
+        <pre style="display:none;" id="hiddenCode"></pre>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src = "sidebar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

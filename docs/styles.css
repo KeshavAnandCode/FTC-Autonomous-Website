@@ -203,68 +203,84 @@ body, html {
     font-family: Arial, sans-serif; /* Use a common sans-serif font */
 }
 
-/* Basic styles for the sidebar */
-.sidebar {
-    position: fixed; /* Fixed position so it stays visible while scrolling */
-    top: 0;
-    left: 0;
-    height: 100%; /* Full height of the viewport */
-    width: 250px; /* Adjust as needed */
-    background-color: #f8f9fa; /* Light gray background */
-    overflow-y: auto; /* Allow sidebar to scroll if content exceeds height */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    z-index: 1000; /* Ensure sidebar is above other content */
+.site-header {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 0;
 }
 
-.sidebar ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0;
+.site-header h1 {
+    font-size: 2em;
     margin: 0;
 }
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #f8f9fa;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0; /* Adjust margin for spacing below header */
+}
+
 .sidebar ul li {
-    padding: 10px 20px; /* Padding for each list item */
+    padding: 10px 20px;
 }
 
 .sidebar ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #333; /* Dark text color */
-    display: block; /* Make the entire list item clickable */
-    transition: background-color 0.3s; /* Smooth background color transition */
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s;
 }
 
 .sidebar ul li a:hover {
-    background-color: #e9ecef; /* Light gray background on hover */
+    color: #0f7bc7;
+    background-color: #e9ecef;
 }
 
-/* Main content area */
+.sidebar ul li a.active {
+    color: #0f7bc7;
+    font-weight: bold;
+}
+
 .content {
-    margin-left: 250px; /* Adjust for sidebar width */
-    padding: 20px; /* Add padding to separate content from sidebar */
+    margin-left: 250px;
+    padding: 20px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .sidebar {
-        width: 200px; /* Reduce sidebar width for smaller screens */
+        width: 200px;
     }
 
     .content {
-        margin-left: 200px; /* Adjust content margin for smaller sidebar */
+        margin-left: 200px;
     }
 }
 
 @media (max-width: 576px) {
     .sidebar {
-        width: 180px; /* Further reduce sidebar width for very small screens */
+        width: 180px;
     }
 
     .content {
-        margin-left: 180px; /* Adjust content margin accordingly */
+        margin-left: 180px;
     }
 }
-
-.sidebar ul li a.active {
-    background-color: #007bff; /* Active link background color */
-    color: #fff; /* Active link text color */
+#Header {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
 }

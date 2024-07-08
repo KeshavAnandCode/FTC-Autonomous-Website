@@ -295,7 +295,6 @@ function loadActionClassesFromLocalStorage() {
     }
 
     window.addEventListener('beforeunload', function(event) {
-        event.preventDefault();
         localStorage.removeItem('actionClasses');
         saveActionClassesToLocalStorage();
 
@@ -303,16 +302,9 @@ function loadActionClassesFromLocalStorage() {
 
     function checkStoredValues() {
         if (!localStorage.getItem('programName') || !localStorage.getItem('packageName')) {
-            const confirmation = confirm('You are missing value(s) from earlier steps. Do you want to go back?');
-            if (confirmation) {
-                window.location.href = 'index.html'; // Example: '/step2.html' or '/path/to/step2.html'
-
-
-            } else {
-
-
-                
-            }
+            alert('You are missing value(s) from earlier steps');
+                window.location.href = 'step1.html'; // Example: '/step2.html' or '/path/to/step2.html'
+            
         } else {
             checkStoredActionClasses();
 

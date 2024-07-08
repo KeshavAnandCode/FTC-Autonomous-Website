@@ -104,8 +104,15 @@ function saveValues() {
         saveValues();
     });
 
+    window.addEventListener('beforeunload', function(){
+
+        saveValues();
+
+
+    });
+
     function checkStoredValues() {
-        if (localStorage.getItem('programName') && localStorage.getItem('packageName')) {
+        if (localStorage.getItem('programName') || localStorage.getItem('packageName')) {
             const confirmation = confirm('Do you want to pick up where you left off?');
             if (confirmation) {
                 retrieveValues();
@@ -120,4 +127,6 @@ function saveValues() {
 
     checkStoredValues();
 
+
 });
+
