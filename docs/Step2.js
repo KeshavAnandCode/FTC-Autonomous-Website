@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const classNameInputPopup = document.getElementById('classNamePopup');
     const saveClassNameBtn = document.getElementById('saveClassNameBtn');
     const cancelClassNameBtn = document.getElementById('cancelClassNameBtn');
+    const step3 = document.getElementById('moveOn');
 
     let editingClassIndex = null;
     let codeMirrorEditor = null; // To store the CodeMirror editor instance
@@ -296,6 +297,7 @@ function loadActionClassesFromLocalStorage() {
 
     window.addEventListener('beforeunload', function(event) {
         localStorage.removeItem('actionClasses');
+
         saveActionClassesToLocalStorage();
 
     });
@@ -311,6 +313,28 @@ function loadActionClassesFromLocalStorage() {
         }
     }
 
+    step3.addEventListener('click', function(){
+        localStorage.removeItem('actionClasses');
+        saveActionClassesToLocalStorage();
+        const classes = localStorage.getItem('actionClasses');
+        let list = classes ? JSON.parse(classes) : [];
+        if (list.length===0){
+            const conf = confirm('You have zero action classes. Are you sure you want to move on?');
+            if (conf){
+                window.location.href = 'step3.html'; // Example: '/step2.html' or '/path/to/step2.html'
+                localStorage.setItem('Step2', 1);
+
+
+            } else {
+                localStorage.removeItem('Step2');
+            }
+        } else {
+            window.location.href = 'step3.html'; // Example: '/step2.html' or '/path/to/step2.html'
+
+        }
+
+
+    });
     checkStoredValues();
 
  
