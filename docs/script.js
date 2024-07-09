@@ -2,18 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const viewCodeBtn = document.getElementById('viewCode');
     const step2Btn = document.getElementById('step2Btn');
     // Retrieve values from localStorage
-function retrieveValues() {
-    const programName = localStorage.getItem('programName');
-    const packageName = localStorage.getItem('packageName');
 
-    // Set values in input fields if they exist
-    if (programName) {
-        document.getElementById('name').value = programName;
-    }
-    if (packageName) {
-        document.getElementById('package').value = packageName;
-    }
-}
 
     // Function to generate code for Step 1
     function generateCodeStep1() {
@@ -114,10 +103,9 @@ function saveValues() {
 
     function checkStoredValues() {
         if (localStorage.getItem('programName') || localStorage.getItem('packageName')) {
-            const confirmation = null;
-            setTimeout(function() {
-                 confirmation = confirm('Do you want to pick up where you left off?');
-            }, 250)
+            
+                 const confirmation = confirm('Do you want to pick up where you left off?');
+    
             if (confirmation) {
                 retrieveValues();
 
@@ -128,9 +116,21 @@ function saveValues() {
             }
         }
     }
-
+    setTimeout(function() {
     checkStoredValues();
+    },250);
 
-
+    function retrieveValues() {
+        const programName = localStorage.getItem('programName');
+        const packageName = localStorage.getItem('packageName');
+    
+        // Set values in input fields if they exist
+        if (programName) {
+            document.getElementById('name').value = programName;
+        }
+        if (packageName) {
+            document.getElementById('package').value = packageName;
+        }
+    }
 });
 

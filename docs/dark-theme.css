@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #333;
+    color: #d5d5d5;
     transition: background-color 0.25s ease, color 0.25s ease;
 
 }
@@ -125,14 +125,16 @@ img {
     position: fixed;
     top: 50%;
     left: 50%;
+    margin-left: 4.5%;
     transform: translate(-50%, -50%);
-    background-color: #f9f9f9;
+    background-color: #464646;
     padding: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid #c1c1c1;
+    box-shadow: #1e1e1e;
     z-index: 1000;
     max-width: 1000px;
     width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(252, 252, 252, 0.1);
 }
 
 .popup-form h3 {
@@ -142,7 +144,7 @@ img {
 .popup-form label {
     display: block;
     margin-bottom: 15px;
-    color: #555;
+    color: #dbdbdb;
 }
 
 .popup-form input[type="text"],
@@ -150,6 +152,7 @@ img {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
+    margin-left: -1.25%;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
@@ -164,6 +167,7 @@ img {
 .popup-form .popup-buttons {
     text-align: right;
     margin-top: 20px;
+    margin-left: -1.95%;
 }
 
 .popup-form button {
@@ -179,9 +183,9 @@ img {
     padding: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #303030;
     border-radius: 4px;
-    background-color: #f9f9f9;
+    background-color: #454545;
 }
 
 .action-class span {
@@ -190,7 +194,7 @@ img {
 
 .action-class-buttons button {
     background-color: #007bff;
-    color: #fff;
+    color: #f3f3f3;
     border: none;
     padding: 8px 12px;
     cursor: pointer;

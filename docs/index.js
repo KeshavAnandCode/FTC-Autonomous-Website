@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
    function goToPage(){
     if(programName &&packageName){
-        if(storedClasses && (!list.length===0||yes)){
+        if((!(list.length===0)||yes)&&storedClasses){
             window.location.href = 'step3.html'; // Example: '/step2.html' or '/path/to/step2.html'
         } else {
             window.location.href = 'step2.html'; // Example: '/step2.html' or '/path/to/step2.html'
@@ -25,5 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
    button.addEventListener('click', function(){
      goToPage();
    });
+
+   localStorage.removeItem('Step2');
 
 });

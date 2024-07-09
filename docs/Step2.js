@@ -284,7 +284,10 @@ function loadActionClassesFromLocalStorage() {
 
 
     function checkStoredActionClasses() {
-        if (localStorage.getItem('actionClasses')) {
+        const storedClasses = localStorage.getItem('actionClasses');
+        let list = storedClasses ? JSON.parse(storedClasses) : [];
+     
+        if (!(list.length===0)) {
             const confirmation = confirm('Do you want to pick up where you left off with your action classes?');
             if (confirmation) {
                 loadActionClassesFromLocalStorage();
@@ -304,14 +307,14 @@ function loadActionClassesFromLocalStorage() {
 
     function checkStoredValues() {
         if (!localStorage.getItem('programName') || !localStorage.getItem('packageName')) {
-            setTimeout(function(){
                 alert('You are missing value(s) from earlier steps');
                 window.location.href = 'index.html'; // Example: '/step2.html' or '/path/to/step2.html'
-            },250)
+            
           
             
         } else {
-            checkStoredActionClasses();
+                checkStoredActionClasses();
+
 
         }
     }
@@ -338,7 +341,10 @@ function loadActionClassesFromLocalStorage() {
 
 
     });
-    checkStoredValues();
+    setTimeout(function(){
+        checkStoredValues();
+
+    },250);
 
  
 
