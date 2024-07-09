@@ -15,7 +15,7 @@ pre {
     margin-bottom: 20px; /* Add margin bottom for spacing */
 }
 button {
-    display: block;
+    display: float;
     width: 8%;
     padding: 10px;
     background-color: #0053ac;

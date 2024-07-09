@@ -340,11 +340,11 @@ body, html {
 }
 
 input:checked + .slider {
-    background-color: #0f498b;
+    background-color: #989898;
 }
 
 input:checked + .slider:before {
-    transform: translateX(31px);
+    transform: translateX(33.5px);
 }
 
 .icon {
@@ -358,11 +358,11 @@ input:checked + .slider:before {
 }
 
 .sun {
-    left: 10px;
-    color: yellow;
+    left: 12px;
+    color: rgb(100, 100, 100);
 }
 
 .moon {
-    right: 10px;
-    color: blue;
+    right: 7px;
+    color: rgb(100, 100, 100);
 }

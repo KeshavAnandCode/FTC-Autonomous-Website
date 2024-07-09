@@ -86,6 +86,7 @@ function saveValues() {
 }
     // Event listener for View Code button
     viewCodeBtn.addEventListener('click', () => {
+        saveValues()
         const generatedCode = generateCodeStep1();
         const newWindow = window.open('view-code.html', '_blank');
         newWindow.addEventListener('load', () => {

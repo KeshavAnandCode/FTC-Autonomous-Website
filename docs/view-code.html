@@ -10,23 +10,28 @@
 <body>
     <div class="container">
         <pre><code id="code-content" class="java"></code></pre>
-        <button id="copyCodeBtn">Copy Code</button>
+
+        <div class = "buttons">        
+            <button id="copyCodeBtn">Copy Code</button>
+            <button id="downloadCodeBtn">Download Code</button>
+    </div>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Function to update code content
-            function updateCodeContent() {
-                const generatedCode = generateCodeStep2(); // Assuming generateCodeStep2 is defined elsewhere
-                document.getElementById('code-content').textContent = generatedCode.trim();
-            }
 
             // Highlight the code block
             hljs.highlightAll();
 
             // Copy code to clipboard functionality
+            
             const copyCodeBtn = document.getElementById('copyCodeBtn');
+            const downloadCodeBtn = document.getElementById('downloadCodeBtn');
+            
+
 
             copyCodeBtn.addEventListener('click', () => {
                 const codeContent = document.getElementById('code-content').textContent.trim();
@@ -37,8 +42,26 @@
                 });
             });
 
+            downloadCodeBtn.addEventListener('click', () => {
+                const codeContent = document.getElementById('code-content').textContent.trim();
+                const blob = new Blob([codeContent], { type: 'text/x-java-source' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                const name = localStorage.getItem('programName');
+                if (name){
+                    a.download = `${name}.java`;
+                } else {
+                    a.download = `OpMode.java`;
+
+                }
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+
             // Initial update of code content
-            updateCodeContent();
         });
     </script>
     <script src="vcscripttheme.js"></script>

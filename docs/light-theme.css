@@ -331,7 +331,7 @@ body, html {
     content: "";
     height: 26px;
     width: 26px;
-    left: 4px;
+    left: 5px;
     bottom: 4px;
     background-color: white;
     transition: .4s;
@@ -357,11 +357,11 @@ input:checked + .slider:before {
 }
 
 .sun {
-    left: 10px;
-    color: yellow;
+    left: 12px;
+    color: rgb(151, 151, 151);
 }
 
 .moon {
-    right: 10px;
-    color: blue;
+    right: 7px;
+    color: rgb(151, 151, 151);
 }
