@@ -304,8 +304,11 @@ function loadActionClassesFromLocalStorage() {
 
     function checkStoredValues() {
         if (!localStorage.getItem('programName') || !localStorage.getItem('packageName')) {
-            alert('You are missing value(s) from earlier steps');
+            setTimeout(function(){
+                alert('You are missing value(s) from earlier steps');
                 window.location.href = 'index.html'; // Example: '/step2.html' or '/path/to/step2.html'
+            },250)
+          
             
         } else {
             checkStoredActionClasses();

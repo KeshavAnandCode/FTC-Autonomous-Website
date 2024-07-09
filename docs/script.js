@@ -21,34 +21,34 @@ function retrieveValues() {
         const packageName = document.getElementById('package').value.trim();
 
         const generatedCode = `
-            package ${packageName};
-            
-            import androidx.annotation.NonNull;
-            
-            // RR-specific imports
-            import com.acmerobotics.dashboard.config.Config;
-            import com.acmerobotics.dashboard.telemetry.TelemetryPacket;
-            import com.acmerobotics.roadrunner.Action;
-            import com.acmerobotics.roadrunner.Pose2d;
-            import com.acmerobotics.roadrunner.SequentialAction;
-            import com.acmerobotics.roadrunner.ParallelAction;
-            import com.acmerobotics.roadrunner.Vector2d;
-            import com.acmerobotics.roadrunner.ftc.Actions;
-            
-            // Non-RR imports
-            import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-            import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-            import com.qualcomm.robotcore.hardware.HardwareMap;
-            import com.qualcomm.robotcore.hardware.Servo;
-            
-            // 23344-Specific Imports
-            import org.firstinspires.ftc.teamcode.Autonomous.RR.MecanumDrive;
-            import org.firstinspires.ftc.teamcode.Teleop.BehindTheScenes.Singletons.Robot;
-        
-            @Config
-            @Autonomous(name = "${programName}", group = "Autonomous")
-            public class ${programName} extends LinearOpMode {
-            } 
+package ${packageName};
+
+import androidx.annotation.NonNull;
+
+// RR-specific imports
+import com.acmerobotics.dashboard.config.Config;
+import com.acmerobotics.dashboard.telemetry.TelemetryPacket;
+import com.acmerobotics.roadrunner.Action;
+import com.acmerobotics.roadrunner.Pose2d;
+import com.acmerobotics.roadrunner.SequentialAction;
+import com.acmerobotics.roadrunner.ParallelAction;
+import com.acmerobotics.roadrunner.Vector2d;
+import com.acmerobotics.roadrunner.ftc.Actions;
+
+// Non-RR imports
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.Servo;
+
+// 23344-Specific Imports
+import org.firstinspires.ftc.teamcode.Autonomous.RR.MecanumDrive;
+import org.firstinspires.ftc.teamcode.Teleop.BehindTheScenes.Singletons.Robot;
+
+@Config
+@Autonomous(name = "${programName}", group = "Autonomous")
+public class ${programName} extends LinearOpMode {
+} 
         `;
 
         return generatedCode;
@@ -113,7 +113,10 @@ function saveValues() {
 
     function checkStoredValues() {
         if (localStorage.getItem('programName') || localStorage.getItem('packageName')) {
-            const confirmation = confirm('Do you want to pick up where you left off?');
+            const confirmation = null;
+            setTimeout(function() {
+                 confirmation = confirm('Do you want to pick up where you left off?');
+            }, 250)
             if (confirmation) {
                 retrieveValues();
 

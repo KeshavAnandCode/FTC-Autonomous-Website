@@ -1,0 +1,368 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2a2a2a, #202020);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+}
+
+.container {
+    width: 50%;
+    max-width: 800px;
+    padding: 30px;
+    background-color: #3e3e3e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-left: 10%;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    display: float;
+    padding-bottom: 10px;
+}
+
+h4, #top {
+    text-align: center;
+    color: #d3d3d3;
+    margin-top: 0;
+}
+
+h2 {
+    color: #efefef;
+    margin-top: 20px;
+}
+
+h5 {
+    font-size: 1.25em;
+    color: #3094ff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #dfdfdf;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background:#004fd7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #3a96ff;
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #767676;
+    background-color: #3b3b3b;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+    font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0040ff;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+#hhhhh {
+    max-width: 90%;
+    height: auto;
+    border-radius: 4px;
+    padding: 5px;
+    margin-left: 5%;
+}
+
+/* Popup form styles */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 30px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-width: 1000px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-form h3 {
+    margin-top: 0;
+}
+
+.popup-form label {
+    display: block;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.popup-form input[type="text"],
+.popup-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Add this CSS to your stylesheet */
+.CodeMirror.small-font {
+    font-size: 12px; /* Adjust the font size as needed */
+    line-height: 1.2; /* Optional: Adjust line height for better readability */
+}
+
+.popup-form .popup-buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.popup-form button {
+    padding: 12px 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.action-class {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.action-class span {
+    font-weight: bold;
+}
+
+.action-class-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.action-class-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+}
+
+.site-header {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.site-header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 15%;
+    background-color: #3a3a3a;
+    border-color: white;
+    border-radius: 10px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0; /* Adjust margin for spacing below header */
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #b6b6b6;
+    display: block;
+    transition: background-color 0.3s ease;
+    transition: color 0.2s;
+
+}
+
+.sidebar ul li a:hover {
+    color: #ffffff;
+}
+
+.sidebar ul li a.active {
+    color: #3094ff;
+    font-weight: bold;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .content {
+        margin-left: 180px;
+    }
+}
+#Header {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1e1e1e;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 16px;
+    bottom: 4px;
+    background-color: rgb(30, 29, 29);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0f498b;
+}
+
+input:checked + .slider:before {
+    transform: translateX(31px);
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.sun {
+    left: 10px;
+    color: yellow;
+}
+
+.moon {
+    right: 10px;
+    color: blue;
+}

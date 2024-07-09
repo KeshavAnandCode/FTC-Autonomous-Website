@@ -8,6 +8,8 @@ body {
     align-items: center;
     min-height: 100vh;
     color: #333;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
 }
 
 .container {
@@ -17,6 +19,10 @@ body {
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
+    margin-left: 10%;
+
+    transition: background-color 0.25s ease, color 0.25s ease;
+
 }
 
 h1 {
@@ -220,11 +226,13 @@ body, html {
     top: 0;
     left: 0;
     height: 100%;
-    width: 300px;
+    width: 15%;
     background-color: #f8f9fa;
     overflow-y: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
 }
 
 .sidebar ul {
@@ -241,12 +249,14 @@ body, html {
     text-decoration: none;
     color: #333;
     display: block;
+    background-color: #77707000;
     transition: background-color 0.3s;
+    transition: color 0.2s;
+
 }
 
 .sidebar ul li a:hover {
-    color: #0f7bc7;
-    background-color: #e9ecef;
+    color: #afafaf;
 }
 
 .sidebar ul li a.active {
@@ -283,4 +293,75 @@ body, html {
     font-size: 18px;
     font-weight: bold;
     color: black;
+}
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 4px;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.sun {
+    left: 10px;
+    color: yellow;
+}
+
+.moon {
+    right: 10px;
+    color: blue;
 }
