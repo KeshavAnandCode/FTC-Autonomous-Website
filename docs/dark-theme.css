@@ -323,7 +323,7 @@ body, html {
     position: absolute;
     cursor: pointer;
     top: 0;
-    left: 0;
+    left: 4px;
     right: 0;
     bottom: 0;
     background-color: #1e1e1e;
@@ -348,7 +348,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(33.5px);
+    transform: translateX(29.5px);
 }
 
 .icon {
