@@ -370,7 +370,7 @@ input:checked + .slider:before {
 
 .moon {
     right: 7px;
-    color: rgb(151, 151, 151);
+    color: #979797;
 }
 .hamburger {
     display: none;
@@ -443,6 +443,17 @@ input:checked + .slider:before {
     position: absolute;
     top: 50%;
     left: 7px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-color: #77707000;
+}
+
+#moon-icon {
+    width: 18px; /* Adjust the size as needed */
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 47px;
     transform: translateY(-50%);
     pointer-events: none;
     background-color: #77707000;

@@ -2,16 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const themeStylesheet = document.getElementById('themeStylesheet');
     const sun = document.getElementById('sun-icon');
+    const moon = document.getElementById('moon-icon');
 
     // Set initial theme
     if (localStorage.getItem('theme') === 'light') {
         themeStylesheet.href = 'light-theme.css';
         sun.src = "sun-512.png";
+        moon.src ="moon-2-512 (1).png"
         themeToggle.checked = false;
     } else {
         themeStylesheet.href = 'dark-theme.css';
         themeToggle.checked = true;
         sun.src = "image.png";
+        moon.src ="moon-2-512.png"
+
 
     }
 
@@ -20,12 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
             themeStylesheet.href = 'dark-theme.css';
             localStorage.setItem('theme', 'dark');
             sun.src = "image.png";
+            moon.src ="moon-2-512.png"
+
 
 
         } else {
             themeStylesheet.href = 'light-theme.css';
             localStorage.setItem('theme', 'light');
             sun.src = "sun-512.png";
+            moon.src ="moon-2-512 (1).png"
+
 
         }
     });
