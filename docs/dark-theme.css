@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #2a2a2a, #202020);
+    background-color:  #202020;
     margin: 0;
     padding: 0;
     display: flex;
@@ -422,4 +422,16 @@ input:checked + .slider:before {
     .container {
         margin-left: 0;
     }
+}
+
+
+#sun-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-color: #77707000;
 }

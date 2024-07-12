@@ -1,8 +1,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    background-color:  #ece9e6;
+
     margin: 0;
     padding: 0;
+    width:100%;
+    height:100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -432,3 +437,13 @@ input:checked + .slider:before {
 }
 }
 
+#sun-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-color: #77707000;
+}
