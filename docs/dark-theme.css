@@ -445,4 +445,5 @@ input:checked + .slider:before {
     transform: translateY(-50%);
     pointer-events: none;
     background-color: #77707000;
+    
 }
