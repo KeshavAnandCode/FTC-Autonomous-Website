@@ -414,6 +414,9 @@ input:checked + .slider:before {
     .content {
         margin-left: 0;
     }
+    #Header {
+    padding-top: 35px;
+    }
 
     .container {
         margin-left: 0;

@@ -412,6 +412,9 @@ input:checked + .slider:before {
     .content {
         margin-left: 0;
     }
+    #Header {
+        padding-top: 35px;
+        }
     .container.sidebar-open {
         pointer-events: none; /* Disable pointer events on the container when sidebar is open */
     }
